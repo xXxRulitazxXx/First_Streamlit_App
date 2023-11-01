@@ -10,5 +10,9 @@ streamlit.text('🥗 Batido de col rizada, espinacas y rúcula')
 streamlit.text('🐔 Huevo duro de gallinas camperas')
 
 streamlit.header('🍌🥭 Prepara tu propio batido de frutas 🥝🍇')
+# Ponemos una lista de selección aquí para que puedan elegir la fruta que quieran incluir 
+streamlit.multiselect("Elige algunas frutas:", list(my_fruit_list.index)) 
+
+# Muestra la tabla en la página.
 streamlit.dataframe(Lista_Frutas)
 
