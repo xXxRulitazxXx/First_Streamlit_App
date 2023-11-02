@@ -3,7 +3,6 @@ import pandas
 import requests
 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-streamlit.text(fruityvice_response)
 
 Lista_Frutas = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 Lista_Frutas = Lista_Frutas.set_index('Fruit') #Se coloca en inglés ya que en el recurso que se llama la Cabecera se llama de esa manera.
@@ -21,4 +20,7 @@ Frutas_A_Mostrar = Lista_Frutas.loc[Frutas_Seleccionadas]
 
 # Muestra la tabla en la página.
 streamlit.dataframe(Frutas_A_Mostrar)
+
+#Nueva linea de Requests
+streamlit.text(fruityvice_response)
 
