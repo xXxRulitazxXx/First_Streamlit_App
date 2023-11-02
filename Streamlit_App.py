@@ -24,6 +24,8 @@ streamlit.dataframe(Frutas_A_Mostrar)
 #Nueva linea de Requests
 streamlit.header("FruityVice Advice!")
 #streamlit.text(fruityvice_response.json()) --Se pide que se borre esta línea
+fruit_choice = streamlit.text_input('De que fruta quieres más información?','Kiwi')
+streamlit.write('El usuario ingresó: ', fruit_choice)
 
 # write your own comment -what does the next line do? 
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
