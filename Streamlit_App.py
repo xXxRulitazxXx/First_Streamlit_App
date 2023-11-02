@@ -22,6 +22,11 @@ Frutas_A_Mostrar = Lista_Frutas.loc[Frutas_Seleccionadas]
 streamlit.dataframe(Frutas_A_Mostrar)
 
 #Nueva linea de Requests
-streamlit.header("¡Enterate de Esto!")
-streamlit.text(fruityvice_response.json())
+streamlit.header("FruityVice Advice!")
+#streamlit.text(fruityvice_response.json()) --Se pide que se borre esta línea
+
+# write your own comment -what does the next line do? 
+fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+# write your own comment - what does this do?
+streamlit.dataframe(fruityvice_normalized)
 
