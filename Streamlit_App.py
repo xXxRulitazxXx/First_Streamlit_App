@@ -23,5 +23,5 @@ streamlit.dataframe(Frutas_A_Mostrar)
 
 #Nueva linea de Requests
 streamlit.header("¡Enterate de Esto!")
-streamlit.text(fruityvice_response,json())
+streamlit.text(fruityvice_response.json())
 
