@@ -22,6 +22,6 @@ Frutas_A_Mostrar = Lista_Frutas.loc[Frutas_Seleccionadas]
 streamlit.dataframe(Frutas_A_Mostrar)
 
 #Nueva linea de Requests
-streamlit.header("Fruityvice Fruit Advice!")
-streamlit.text(fruityvice_response)
+streamlit.header("¡Enterate de Esto!")
+streamlit.text(fruityvice_response,json())
 
