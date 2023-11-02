@@ -2,8 +2,6 @@ import streamlit
 import pandas
 import requests
 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
-
 Lista_Frutas = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 Lista_Frutas = Lista_Frutas.set_index('Fruit') #Se coloca en inglés ya que en el recurso que se llama la Cabecera se llama de esa manera.
 
@@ -26,6 +24,8 @@ streamlit.header("FruityVice Advice!")
 #streamlit.text(fruityvice_response.json()) --Se pide que se borre esta línea
 fruit_choice = streamlit.text_input('De que fruta quieres más información?','Kiwi')
 streamlit.write('El usuario ingresó: ', fruit_choice)
+
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
 # write your own comment -what does the next line do? 
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
